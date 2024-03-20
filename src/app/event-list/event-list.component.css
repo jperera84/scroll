@@ -1,0 +1,69 @@
+:host {
+    color: #FFFFFF;
+    height: 100%;
+    display: flex;
+}
+.container {
+    width: 100%;
+    display: flex;
+    flex:1;
+    flex-direction: column;
+    padding: 1rem;
+}
+.container-list {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+table {
+    border: 2px solid #283593;
+    letter-spacing: 1px;
+    font-size: 1rem;
+    width: 100%;
+}
+caption {
+    caption-side: bottom;
+    padding: 1rem;
+    font-weight: bold;
+}
+thead,
+tfoot {
+    background-color: #283593;
+}
+th,
+td {
+    border: 1px solid #1A237E;
+    padding: 8px 10px;
+}
+tbody > tr:nth-of-type(even) {
+    background-color: #3F51B5;
+}
+tfoot th {
+    text-align: center;
+}
+tfoot td {
+    font-weight: bold;
+}
+button {
+    width: 20rem;
+    height: 2.5rem;
+    background-color: #1A237E;
+    color: #FFFFFF;
+    border: solid 1px #1A237E;
+    font-size: 1rem;
+    border-radius: 3px;
+    cursor: pointer;
+}
+button:active {
+    background-color: #3F51B5;
+    border: solid 1px #3F51B5;
+}
+.content-foot {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    padding: 1rem 0;
+}
+a {
+    color: #FFFFFF;
+}

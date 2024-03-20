@@ -1,0 +1,67 @@
+:host {
+    display: flex;
+    height: auto;
+    width: 100%;
+    border: 1px solid #283593;
+}
+.container {
+    width: 100%;
+    height: 100%;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+}
+.form-input {
+    display: flex;
+    justify-content: stretch;
+}
+.col1, .col2{
+    width: 50%;
+    padding: 1rem;
+}
+.form-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+input[type="text"] {
+    border-radius: 3px;
+    font-size: 1rem;
+    padding: 1rem;
+    background-color: #283593;
+    color: #FFFFFF;
+    border: 1px solid #283593;
+    outline: none;
+}
+:host ::ng-deep .p-calendar {
+    width: 100%;
+    outline: none;
+}
+:host ::ng-deep .p-inputtext {
+    border-radius: 3px;
+    font-size: 1rem;
+    padding: 1rem;
+    background-color: #283593;
+    color: #FFFFFF;
+    border: 1px solid #283593;
+    outline: none;
+    box-shadow: none;
+}
+button {
+    width: 20rem;
+    height: 2.5rem;
+    justify-self: flex-end;
+    align-self: flex-end;
+    margin-bottom: 1rem;
+    background-color: #1A237E;
+    color: #FFFFFF;
+    border: solid 1px #1A237E;
+    font-size: 1rem;
+    border-radius: 3px;
+    cursor: pointer;
+}
+button:active {
+    background-color: #3F51B5;
+    border: solid 1px #3F51B5;
+}

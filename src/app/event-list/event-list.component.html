@@ -1,0 +1,28 @@
+<div class="container">
+    <app-event-list-filter></app-event-list-filter>
+    <div class="container-list">
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Phone</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Date</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let evt of events">
+                    <th>{{evt.name}}</th>
+                    <td>{{evt.phone}}</td>
+                    <td>{{evt.email}}</td>
+                    <td>{{evt.date}}</td>
+                    <td><a routerLink="/events/detail" routerLinkActive="active" ariaCurrentWhenActive="page">Detail</a></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="content-foot">
+            <button (click)="_loadMore()">Load More</button>
+        </div>
+    </div>
+</div>

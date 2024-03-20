@@ -1,0 +1,11 @@
+:host {
+    display: flex;
+    background-color: #303F9F;
+    min-height: 100vh;
+}
+.main {
+    width: 100%;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}

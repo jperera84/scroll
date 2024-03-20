@@ -1,0 +1,35 @@
+<div class="container">
+    <form [formGroup]="searchForm" class="form" (ngSubmit)="_onSearchFormSubmit()">
+        <div class="form-input">
+            <div class="col1">
+                <div class="form-field">
+                    <label for="name">
+                      Name:
+                    </label>
+                    <input id="name" type="text" formControlName="name">
+                </div>
+                <div class="form-field">
+                    <label for="phone">
+                        Phone:
+                    </label>
+                    <input id="phone" type="text" formControlName="phone">
+                </div>
+            </div>
+            <div class="col2">
+                <div class="form-field">
+                    <label for="email">
+                        Email:
+                    </label>
+                    <input id="email" type="text" formControlName="email">
+                </div>
+                <div class="form-field">
+                    <label for="date">
+                        Date:
+                    </label>
+                    <p-calendar formControlName="date" [showIcon]="true"></p-calendar>
+                </div>
+            </div>
+        </div>
+        <button type="submit">Search</button>
+    </form>
+</div>
