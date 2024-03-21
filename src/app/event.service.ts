@@ -49,7 +49,6 @@ export class EventService {
     if (value) {
       this.items = [];
       this._pageInit = 0;
-      this._currentPage = 1;
       this.loadEvents();
     }
   }
@@ -61,7 +60,7 @@ export class EventService {
 
   loadEvents() {
     const filteredData = this._filterData();
-    this.items = [...this.items, ...filteredData.splice(this._pageInit, this._pageOffset)];
+    this.items = [...this.items, ...filteredData.splice(this._pageInit, this._currentPage * this._pageOffset)];
     this.eventsSubject.next(this.items);
   }
 
