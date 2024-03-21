@@ -27,8 +27,6 @@ export class EventListFilterComponent implements OnInit {
     date: ''
   });
 
-  onUserSearching = false;
-
   ngOnInit(): void {
     this.route.paramMap.pipe(distinctUntilChanged()).subscribe(params => {
       const name = params.get('name');

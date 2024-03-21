@@ -4,6 +4,7 @@
         <table>
             <thead>
                 <tr>
+                    <th scope="col">Id</th>
                     <th scope="col">Name</th>
                     <th scope="col">Phone</th>
                     <th scope="col">Email</th>
@@ -13,11 +14,12 @@
             </thead>
             <tbody>
                 <tr *ngFor="let evt of events">
+                    <th>{{evt.id}}</th>
                     <th>{{evt.name}}</th>
                     <td>{{evt.phone}}</td>
                     <td>{{evt.email}}</td>
                     <td>{{evt.date}}</td>
-                    <td><a routerLink="/events/detail" routerLinkActive="active" ariaCurrentWhenActive="page">Detail</a></td>
+                    <td><a [routerLink]="['/events/detail', evt.id]" routerLinkActive="active" ariaCurrentWhenActive="page">Detail</a></td>
                 </tr>
             </tbody>
         </table>

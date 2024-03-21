@@ -54,6 +54,9 @@ export class EventService {
     }
   }
 
+  private eventSubject = new Subject<Event>();
+  event$ = this.eventSubject.asObservable();
+
   constructor() { }
 
   loadEvents() {
@@ -82,6 +85,11 @@ export class EventService {
       items = [...items, ...eventsData];
     }
     return items;
+  }
+
+  loadEvent(id: number) {
+    const eventObj = eventsData.filter(e => e.id === id)[0];
+    this.eventSubject.next(eventObj);
   }
 
 }
